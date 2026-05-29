@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sundeep // Cyber Security Specialist</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrix"></canvas>
+
+    <!-- Scan Line Overlay -->
+    <div class="scanline"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-text">
+                <span class="loader-bracket">[</span>
+                <span id="loaderText">INITIALIZING SYSTEM...</span>
+                <span class="loader-bracket">]</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress" id="loaderProgress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Sundeep S<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about" data-text="About">//About</a></li>
+                <li><a href="#skills" data-text="Skills">//Skills</a></li>
+                <li><a href="#experience" data-text="Exp">//Experience</a></li>
+                <li><a href="#certs" data-text="Certs">//Certs</a></li>
+                <li><a href="#contact" data-text="Contact">//Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="terminal-title">root@sundeep:~#</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">whoami</span></p>
+                    <h1 class="glitch" data-text="SUNDEEP S">SUNDEEP S</h1>
+                    <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat role.txt</span></p>
+                    <h2 class="typing-text" id="typingText"></h2>
+                    <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat summary.txt</span></p>
+                    <p class="hero-desc">
+                        <span class="code-comment">// 7 years | VAPT | Web | API | Network | Cloud | Container Security</span>
+                    </p>
+                    <div class="hero-stats-terminal">
+                        <p class="terminal-line">
+                            <span class="prompt">$</span> <span class="cmd">./stats --all</span>
+                        </p>
+                        <div class="stats-output">
+                            <span class="stat-item"><i class="fas fa-clock"></i> experience: <span class="neon-green">7+ years</span></span>
+                            <span class="stat-item"><i class="fas fa-bug"></i> vulns_found: <span class="neon-green">500+</span></span>
+                            <span class="stat-item"><i class="fas fa-rocket"></i> releases_secured: <span class="neon-green">30+</span></span>
+                            <span class="stat-item"><i class="fas fa-building"></i> companies: <span class="neon-green">ABB | Accenture | HCL</span></span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn-hack"><span class="btn-text">&gt; CONTACT_ME</span><span class="btn-glitch"></span></a>
+                        <a href="#experience" class="btn-hack btn-outline"><span class="btn-text">&gt; VIEW_EXP</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>SCROLL DOWN</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title"><span class="hash">#</span> About<span class="underscore">_</span>Me</h2>
+            <div class="about-grid">
+                <div class="about-text-block">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-file">profile.json</span>
+                        </div>
+                        <pre class="code-content"><code>{
+  <span class="key">"name"</span>: <span class="value">"Sundeep S"</span>,
+  <span class="key">"title"</span>: <span class="value">"Cyber Security Specialist"</span>,
+  <span class="key">"focus"</span>: <span class="value">"Penetration Testing"</span>,
+  <span class="key">"experience"</span>: <span class="value">"7 years"</span>,
+  <span class="key">"domains"</span>: [
+    <span class="value">"Aerospace"</span>,
+    <span class="value">"Automotive"</span>,
+    <span class="value">"Enterprise"</span>
+  ],
+  <span class="key">"certified"</span>: <span class="bool">true</span>,
+  <span class="key">"methodology"</span>: <span class="value">"OWASP Top 10"</span>,
+  <span class="key">"passion"</span>: <span class="value">"Breaking things to make them secure"</span>
+}</code></pre>
+                    </div>
+                </div>
+                <div class="about-cards">
+                    <div class="hack-card" data-aos="fade-up">
+                        <div class="hack-card-icon"><i class="fas fa-spider"></i></div>
+                        <h4>Web & API Pentesting</h4>
+                        <p>OWASP Top 10 | Auth bypass | Injection | Business logic flaws</p>
+                    </div>
+                    <div class="hack-card" data-aos="fade-up">
+                        <div class="hack-card-icon"><i class="fas fa-network-wired"></i></div>
+                        <h4>Network Exploitation</h4>
+                        <p>Infrastructure testing | Wi-Fi attacks | Lateral movement</p>
+                    </div>
+                    <div class="hack-card" data-aos="fade-up">
+                        <div class="hack-card-icon"><i class="fas fa-docker"></i></div>
+                        <h4>Container Security</h4>
+                        <p>Docker | Kubernetes | AKS | CIS Benchmarks | Escape testing</p>
+                    </div>
+                    <div class="hack-card" data-aos="fade-up">
+                        <div class="hack-card-icon"><i class="fas fa-cloud"></i></div>
+                        <h4>Cloud Pentesting</h4>
+                        <p>Azure | NSG bypass | Privilege escalation | Misconfiguration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <h2 class="section-title"><span class="hash">#</span> Tech<span class="underscore">_</span>Arsenal</h2>
+            <div class="skills-terminal">
+                <div class="skill-group">
+                    <h3 class="skill-header"><i class="fas fa-skull-crossbones"></i> Offensive_Tools</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <span class="skill-name">Burp Suite</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Nmap</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Kali Linux</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Nessus</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Acunetix / Invicti</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Air Crack-ng</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skill-header"><i class="fas fa-shield-halved"></i> Defense_&_Analysis</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <span class="skill-name">Trivy / Docker-Bench</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Black Duck (SCA)</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SonarQube (SAST)</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Azure DevOps</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">OpenVAS / Nexpose</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Threat Modeling (STRIDE)</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="87"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="frameworks-grid">
+                <div class="framework-chip"><i class="fas fa-book-skull"></i> OWASP Top 10</div>
+                <div class="framework-chip"><i class="fas fa-industry"></i> IEC 62443</div>
+                <div class="framework-chip"><i class="fas fa-landmark"></i> NIST CSF</div>
+                <div class="framework-chip"><i class="fas fa-cubes"></i> CIS Benchmarks</div>
+                <div class="framework-chip"><i class="fas fa-code-branch"></i> Secure SDLC</div>
+                <div class="framework-chip"><i class="fas fa-infinity"></i> DevSecOps</div>
+                <div class="framework-chip"><i class="fas fa-docker"></i> Docker & K8s</div>
+                <div class="framework-chip"><i class="fas fa-cloud"></i> Azure Cloud</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title"><span class="hash">#</span> Work<span class="underscore">_</span>Experience</h2>
+            
+            <!-- ABB -->
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div class="exp-meta">
+                        <span class="exp-company-tag">ABB</span>
+                        <span class="exp-date">Jun 2024 &mdash; Present</span>
+                    </div>
+                    <h3 class="exp-role">Cyber Security Specialist</h3>
+                    <div class="exp-status"><span class="status-dot active"></span> Currently Active</div>
+                </div>
+                <div class="exp-body">
+                    <ul class="exp-list">
+                        <li><span class="bullet">&gt;</span> Conducted penetration testing of web applications, APIs, and cloud-hosted services across multiple product lines, identifying critical vulnerabilities aligned with OWASP Top 10.</li>
+                        <li><span class="bullet">&gt;</span> Performed network penetration testing on Azure cloud environments, AKS clusters, and containerized deployments.</li>
+                        <li><span class="bullet">&gt;</span> Led application security assessments including SAST, DAST, and manual pentesting for ABB Process Automation R&D.</li>
+                        <li><span class="bullet">&gt;</span> Executed threat modeling using STRIDE to identify attack vectors at the design stage.</li>
+                        <li><span class="bullet">&gt;</span> Docker & Kubernetes security — CIS Benchmark hardening, Trivy, Microsoft Defender scanning.</li>
+                        <li><span class="bullet">&gt;</span> SCA using Black Duck and Dependency-Track for OSS vulnerability detection.</li>
+                        <li><span class="bullet">&gt;</span> Coordinated remediation of 500+ vulnerabilities with cross-functional teams.</li>
+                        <li><span class="bullet">&gt;</span> Integrated security into CI/CD pipelines via Azure DevOps — automated DAST & ticket creation.</li>
+                        <li><span class="bullet">&gt;</span> NSG review, public access restriction, rate limiting to reduce attack surface.</li>
+                        <li><span class="bullet">&gt;</span> Compliance support for IEC 62443 and NIST frameworks.</li>
+                        <li><span class="bullet">&gt;</span> Security sign-off for 30+ product releases through comprehensive pentesting.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Accenture -->
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div class="exp-meta">
+                        <span class="exp-company-tag">ACCENTURE</span>
+                        <span class="exp-date">Apr 2022 &mdash; Jun 2024</span>
+                    </div>
+                    <h3 class="exp-role">Technology Security Analyst</h3>
+                </div>
+                <div class="exp-body">
+                    <ul class="exp-list">
+                        <li><span class="bullet">&gt;</span> VAPT on web apps and network infra for SUS Navitaire (aerospace) and Nissan (automotive).</li>
+                        <li><span class="bullet">&gt;</span> Web app pentesting for Accenture internal apps (CIO) — auth bypass, injection, authz flaws.</li>
+                        <li><span class="bullet">&gt;</span> Developed pentest methodology documentation and test case frameworks.</li>
+                        <li><span class="bullet">&gt;</span> Detailed security reports with risk ratings, PoC evidence, and remediation guidance.</li>
+                        <li><span class="bullet">&gt;</span> Fix validation and re-testing with development teams.</li>
+                        <li><span class="bullet">&gt;</span> Network assessments using Nessus, Nmap, and Kali tools.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- HCL -->
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div class="exp-meta">
+                        <span class="exp-company-tag">HCL TECHNOLOGIES</span>
+                        <span class="exp-date">Aug 2019 &mdash; Apr 2022</span>
+                    </div>
+                    <h3 class="exp-role">Software Engineer - Cyber Security</h3>
+                </div>
+                <div class="exp-body">
+                    <ul class="exp-list">
+                        <li><span class="bullet">&gt;</span> Pentesting for Boeing CEN server — network devices, cameras, NAS, switches.</li>
+                        <li><span class="bullet">&gt;</span> Web app pentesting (SON, Welbuilt, WLC, Adonis) with Burp Suite & AppScan.</li>
+                        <li><span class="bullet">&gt;</span> Wi-Fi security testing using Air Crack-ng and Kali Linux.</li>
+                        <li><span class="bullet">&gt;</span> Threat modeling for Zodiac Inflight Innovation media streaming systems.</li>
+                        <li><span class="bullet">&gt;</span> Docker security with Docker-Bench and Trivy.</li>
+                        <li><span class="bullet">&gt;</span> Secure code review and OSS compliance (SCA).</li>
+                        <li><span class="bullet">&gt;</span> VAPT reporting and cross-team remediation coordination.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section section-alt" id="certs">
+        <div class="container">
+            <h2 class="section-title"><span class="hash">#</span> Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-badge">
+                    <div class="badge-icon"><i class="fas fa-user-secret"></i></div>
+                    <div class="badge-info">
+                        <h4>CEH v10</h4>
+                        <p>Certified Ethical Hacker</p>
+                        <span class="badge-issuer">EC-Council, USA</span>
+                    </div>
+                    <div class="badge-year">2020</div>
+                </div>
+                <div class="cert-badge">
+                    <div class="badge-icon"><i class="fab fa-python"></i></div>
+                    <div class="badge-info">
+                        <h4>Python</h4>
+                        <p>Programming Certification</p>
+                        <span class="badge-issuer">Besant Technology, Chennai</span>
+                    </div>
+                    <div class="badge-year">2019</div>
+                </div>
+                <div class="cert-badge">
+                    <div class="badge-icon"><i class="fas fa-microchip"></i></div>
+                    <div class="badge-info">
+                        <h4>Embedded Systems</h4>
+                        <p>System Design</p>
+                        <span class="badge-issuer">Cranes Varsity, Bengaluru</span>
+                    </div>
+                    <div class="badge-year">2019</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title"><span class="hash">#</span> Establish<span class="underscore">_</span>Connection</h2>
+            <div class="contact-terminal">
+                <div class="terminal-window contact-window">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="terminal-title">connection@sundeep:~#</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat contact_info.txt</span></p>
+                        <div class="contact-info-grid">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+91 8277791078</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>sundeep@email.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Tumkur, Karnataka, India</span>
+                            </div>
+                        </div>
+                        <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">echo "Let's connect!"</span></p>
+                        <p class="terminal-output neon-green">> Ready to collaborate on security projects.</p>
+                        <p class="terminal-line"><span class="prompt">$</span> <span class="cursor-blink">_</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">&lt;/&gt; Crafted by <span class="neon-green">Sundeep S</span> | &copy; 2026</p>
+            <p class="footer-sub">// All systems secured.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
